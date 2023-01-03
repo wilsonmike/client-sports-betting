@@ -12,7 +12,79 @@ export default function Home({ data }: { data: any }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="container mx-auto bg-slate-600 px-4">hello</div>
+      <main>
+        <div className="relative px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl pt-20 pb-32 sm:pt-48 sm:pb-40">
+            <div>
+              <div className="flex mx-auto">
+                <div className="hidden sm:mb-8 sm:flex sm:justify-center">
+                  <div className="relative mr-2 overflow-hidden rounded-full py-1.5 px-4 text-sm leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                    <span className="text-gray-600 text-md font-medium">
+                      🏀NBA{" "}
+                      <a href="#" className="font-semibold text-red-600">
+                        <span
+                          className="absolute inset-0 text-sm"
+                          aria-hidden="true"
+                        />
+                      </a>
+                    </span>
+                  </div>
+                </div>
+                <div className="hidden sm:mb-8 sm:flex sm:justify-center">
+                  <div className="relative mr-2 overflow-hidden rounded-full py-1.5 px-4 text-sm leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                    <span className="text-gray-600 text-md font-medium">
+                      🏀NCAAM{" "}
+                      <a href="#" className="font-semibold text-red-600">
+                        <span className="absolute inset-0" aria-hidden="true" />
+                      </a>
+                    </span>
+                  </div>
+                </div>
+                <div className="hidden sm:mb-8 sm:flex sm:justify-center">
+                  <div className="relative overflow-hidden rounded-full py-1.5 px-4 text-sm leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                    <span className="text-gray-600 text-md font-medium">
+                      🏈NFL{" "}
+                      <a href="#" className="font-semibold text-red-600">
+                        <span className="absolute inset-0" aria-hidden="true" />
+                      </a>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h1 className="text-4xl font-bold tracking-tight sm:text-center sm:text-6xl">
+                  Where sports bettors find the best odds for their bets
+                </h1>
+                <p className="mt-6 text-lg leading-8 text-gray-600 sm:text-center">
+                  Shop lines from all major US and EU sportsbooks. Find value
+                  bets and compare lines to make sure you are getting the best
+                  odds.
+                </p>
+                <div className="mt-8 flex gap-x-4 sm:justify-center">
+                  <a
+                    href="#"
+                    className="inline-block rounded-lg bg-rose-600 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-rose-600 hover:bg-rose-700 hover:ring-rose-700"
+                  >
+                    Get started{" "}
+                    <span className="text-white" aria-hidden="true">
+                      &rarr;
+                    </span>
+                  </a>
+                  <a
+                    href="#"
+                    className="inline-block rounded-lg px-4 py-1.5 text-base font-semibold leading-7 text-gray-900 ring-1 ring-gray-900/10 hover:ring-gray-900/20"
+                  >
+                    Live demo{" "}
+                    <span className="text-gray-400" aria-hidden="true">
+                      &rarr;
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
     </>
   );
 }
