@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import Image from "next/image";
 
 const navigation = [
   { name: "Product", href: "#" },
@@ -16,18 +17,25 @@ export default function Navbar() {
 
   return (
     <div className="isolate">
-      <div className="px-6 pt-6 lg:px-8">
+      <div className="px-6 pt-6">
         <div>
           <nav
-            className="flex h-9 p-7 items-center rounded-lg justify-between ring-1 ring-gray-400/10 shadow-lg"
+            className="flex justify-between items-center my-auto ring-1 ring-gray-100 p-4 rounded-lg shadow-sm"
             aria-label="Global"
           >
             <div className="flex lg:min-w-0 lg:flex-1" aria-label="Global">
               <Link href="/" className="-m-1.5 p-1.5">
-                <span className="sr-only">Your Company</span>
-                <h1 className="text-lg font-bold tracking-tight sm:text-center sm:text-lg font-mono">
-                  UNDERDOG/<span className="text-emerald-500">DATA</span>
-                </h1>
+                <div className="flex justify-center">
+                  <Image
+                    src={"/underdogdata.svg"}
+                    height={30}
+                    width={30}
+                    alt="UNDERDOG/DATA"
+                  />
+                  <h1 className="ml-2 text-lg font-bold font-mono items-center my-auto">
+                    UNDERDOG/<span className="text-emerald-500">DATA</span>
+                  </h1>
+                </div>
               </Link>
             </div>
             <div className="flex lg:hidden">
@@ -61,18 +69,16 @@ export default function Navbar() {
             </div>
           </nav>
           <Dialog as="div" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
-            <Dialog.Panel
-              focus="true"
-              className="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 lg:hidden"
-            >
+            <Dialog.Panel className="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 lg:hidden">
               <div className="flex h-9 items-center justify-between">
                 <div className="flex">
                   <a href="#" className="-m-1.5 p-1.5">
                     <span className="sr-only">Your Company</span>
-                    <img
-                      className="h-8"
-                      src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                      alt=""
+                    <Image
+                      src={"/underdogdata.svg"}
+                      height={30}
+                      width={30}
+                      alt="UNDERDOG/DATA"
                     />
                   </a>
                 </div>
