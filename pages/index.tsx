@@ -16,12 +16,15 @@ export default function Home({ data }: { data: any }) {
         <div className="relative px-6 lg:px-8">
           <div className="mx-auto max-w-3xl pt-20 pb-32 sm:pt-20 sm:pb-40">
             <div>
-              <div className="flex mx-auto">
+              <div className="flex mx-auto align-middle justify-center">
                 <div className="hidden sm:mb-8 sm:flex sm:justify-center">
                   <div className="relative mr-2 overflow-hidden rounded-full py-1.5 px-4 text-sm leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
                     <span className="text-gray-600 text-sm font-medium">
                       🏀NBA{" "}
-                      <a href="#" className="font-semibold text-red-600">
+                      <a
+                        href="/sports/nba"
+                        className="font-semibold text-red-600"
+                      >
                         <span
                           className="absolute inset-0 text-sm"
                           aria-hidden="true"
