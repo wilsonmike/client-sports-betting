@@ -15,21 +15,19 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div className="isolate bg-white">
+    <div className="isolate">
       <div className="px-6 pt-6 lg:px-8">
         <div>
           <nav
-            className="flex h-9 items-center justify-between"
+            className="flex h-9 p-7 items-center rounded-lg justify-between ring-1 ring-gray-400/10 shadow-lg"
             aria-label="Global"
           >
             <div className="flex lg:min-w-0 lg:flex-1" aria-label="Global">
               <Link href="/" className="-m-1.5 p-1.5">
                 <span className="sr-only">Your Company</span>
-                <img
-                  className="h-8"
-                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                  alt=""
-                />
+                <h1 className="text-lg font-bold tracking-tight sm:text-center sm:text-lg font-mono">
+                  UNDERDOG/<span className="text-emerald-500">DATA</span>
+                </h1>
               </Link>
             </div>
             <div className="flex lg:hidden">
@@ -47,7 +45,7 @@ export default function Navbar() {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="font-semibold text-gray-900 hover:text-gray-900"
+                  className="font-semibold text-gray-900 hover:text-gray-600"
                 >
                   {item.name}
                 </a>
@@ -56,9 +54,9 @@ export default function Navbar() {
             <div className="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-end">
               <a
                 href="#"
-                className="inline-block rounded-lg px-3 py-1.5 text-sm font-semibold leading-6 text-gray-900 shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20"
+                className="inline-block font-semibold leading-6 text-gray-900 shadow-sm"
               >
-                Log in
+                Login
               </a>
             </div>
           </nav>
