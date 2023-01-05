@@ -11,7 +11,7 @@ export default function Layout({ children }: { children: any }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/underdogdata.svg" />
       </Head>
-      <div className="justify-center mx-auto dark:bg-gray-800">
+      <div className="justify-center mx-auto dark:bg-gray-900">
         <Navbar />
         <main>{children}</main>
         <Footer />
