@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { Inter } from "@next/font/google";
-import { IoMdBasketball } from "react-icons/io";
+import { IoMdBasketball, IoMdAmericanFootball } from "react-icons/io";
+import { GiAmericanFootballHelmet } from "react-icons/gi";
 import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -54,12 +55,15 @@ export default function Home({ data }: { data: any }) {
                   </div>
                 </div>
                 <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-                  <div className="relative overflow-hidden rounded-full py-1.5 px-4 text-sm leading-6 ring-1 ring-gray-700 hover:ring-emerald-800">
-                    <span className="text-gray-400 text-sm font-medium">
-                      🏈NFL{" "}
-                      <a href="#" className="font-semibold text-red-600">
+                  <div className="relative overflow-hidden rounded-full py-2 px-4 text-sm leading-6 ring-1 ring-gray-700 hover:ring-emerald-800">
+                    <span className="text-gray-400 text-sm font-medium flex items-center">
+                      <span className="text-lg mr-1 text-gray-400">
+                        <GiAmericanFootballHelmet />
+                      </span>
+                      NFL{" "}
+                      <Link href="#" className="font-semibold text-gray-400">
                         <span className="absolute inset-0" aria-hidden="true" />
-                      </a>
+                      </Link>
                     </span>
                   </div>
                 </div>
