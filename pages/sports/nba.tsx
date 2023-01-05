@@ -23,15 +23,15 @@ export default function NBA({ data }: { data: any }) {
                   <div className="text-sm font-bold dark:text-gray-600">
                     {item.sport_title}
                   </div>
-                  <div className="text-sm font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-800 border border-gray-800">
+                  <div className="text-sm font-medium inline-flex items-center px-2.5 py-0.5 rounded  dark:text-gray-600">
                     {new Date(item.commence_time).toLocaleDateString()}
                   </div>
                 </div>
                 <div className="flex p-4 dark:bg-gray-800">
-                  <div className="text-sm text-gray-300 font-semibold">
+                  <div className="text-md text-gray-300 font-semibold">
                     {item.away_team} @
                   </div>
-                  <div className="text-sm text-gray-300 font-semibold">
+                  <div className="text-md text-gray-300 font-semibold">
                     ⚡{item.home_team}
                   </div>
                 </div>
@@ -54,13 +54,19 @@ export default function NBA({ data }: { data: any }) {
                               <div
                                 className={`flex ml-3 text-md text-gray-800 ${
                                   outcome.price >= 0
-                                    ? "bg-emerald-100 text-emerald-800 text-sm font-medium inline-flex items-center mx-auto my-1 justify-center w-10 py-0.5 rounded dark:bg-gray-900 dark:text-emerald-400 border border-emerald-400"
-                                    : "bg-red-100 text-red-800 text-sm font-medium inline-flex items-center mx-auto my-1 justify-center w-10 py-0.5 rounded dark:bg-gray-900 dark:text-red-400 border border-red-400"
+                                    ? "text-sm font-medium inline-flex items-center mx-auto my-1 justify-center w-10 py-0.5 rounded dark:bg-gray-900 dark:text-emerald-400 border border-emerald-400"
+                                    : "text-sm font-medium inline-flex items-center mx-auto my-1 justify-center w-10 py-0.5 rounded dark:bg-gray-900 dark:text-red-400 border border-red-400"
                                 }`}
                               >
                                 {outcome.price}
                               </div>
-                              <div className="flex-1 text-sm text-gray-600 ml-10">
+                              <div
+                                className={`flex-1 text-sm text-gray-600 ml-10 ${
+                                  outcome.point >= 0 || outcome.point <= 0
+                                    ? "text-sm font-medium inline-flex items-center mx-auto my-1 justify-center w-10 py-0.5 rounded dark:bg-gray-900 dark:text-blue-300 border border-blue-300"
+                                    : ""
+                                }`}
+                              >
                                 {outcome.point}
                               </div>
                             </div>
