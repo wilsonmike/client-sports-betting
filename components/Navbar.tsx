@@ -17,10 +17,10 @@ export default function Navbar() {
 
   return (
     <div className="isolate">
-      <div className="px-6 pt-6">
+      <div className="max-w-7xl px-6 pt-6 mx-auto">
         <div>
           <nav
-            className="flex justify-between items-center my-auto ring-1 ring-gray-100 p-4 rounded-lg shadow-sm"
+            className="flex dark:bg-gray-800 justify-between items-center my-auto ring-1 ring-gray-700 p-4 rounded-lg shadow-sm"
             aria-label="Global"
           >
             <div className="flex lg:min-w-0 lg:flex-1" aria-label="Global">
@@ -32,8 +32,8 @@ export default function Navbar() {
                     width={30}
                     alt="UNDERDOG/DATA"
                   />
-                  <h1 className="ml-2 text-lg font-bold font-mono items-center my-auto">
-                    UNDERDOG/<span className="text-emerald-500">DATA</span>
+                  <h1 className="ml-2 text-lg font-bold text-gray-300 font-mono items-center my-auto">
+                    UNDERDOG<span className="text-emerald-500">DATA</span>
                   </h1>
                 </div>
               </Link>
@@ -53,7 +53,7 @@ export default function Navbar() {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="font-semibold text-gray-900 hover:text-gray-600"
+                  className="font-semibold text-gray-300 hover:text-gray-400"
                 >
                   {item.name}
                 </a>
@@ -62,7 +62,7 @@ export default function Navbar() {
             <div className="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-end">
               <a
                 href="#"
-                className="inline-block font-semibold leading-6 text-gray-900 shadow-sm"
+                className="inline-block font-semibold leading-6 text-gray-900"
               >
                 Login
               </a>
@@ -73,7 +73,6 @@ export default function Navbar() {
               <div className="flex h-9 items-center justify-between">
                 <div className="flex">
                   <a href="#" className="-m-1.5 p-1.5">
-                    <span className="sr-only">Your Company</span>
                     <Image
                       src={"/underdogdata.svg"}
                       height={30}

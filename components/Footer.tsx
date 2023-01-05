@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <div className="px-6 pt-6 mt-[100vh] bg-emerald-500">
+    <div className="max-w-7xl mx-auto px-6 pt-6 mt-[100vh] ring-1 ring-gray-500">
       <div className=" ">
         <div className="max-w-2xl mx-auto text-white py-10">
           <div className="text-center">
