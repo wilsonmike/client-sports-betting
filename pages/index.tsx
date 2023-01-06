@@ -18,11 +18,41 @@ export default function Home({ data }: { data: any }) {
         <link rel="icon" href="/underdogdata.svg" />
       </Head>
       <main>
-        <div className="relative px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl pt-20 pb-32 sm:pt-20 sm:pb-40">
+        <div className="relative">
+          <div className="mx-auto pt-20 pb-32 px-4 xl:px-0">
             <div>
-              <div className="flex mx-auto align-middle justify-center">
-                <div className="hidden sm:mb-8 sm:flex sm:justify-center">
+              <div className="max-w-3xl mx-auto">
+                <h1 className="text-4xl text-gray-300 font-bold tracking-tight sm:text-center sm:text-6xl">
+                  Where sports bettors find the best odds for their bets
+                </h1>
+                <p className="mt-6 text-lg leading-8 text-gray-500 sm:text-center">
+                  Shop lines from all major US and EU sportsbooks. Find value
+                  bets, data, and compare lines to make sure you are getting the
+                  best odds.
+                </p>
+                <div className="mt-8 flex gap-x-4 sm:justify-center">
+                  <a
+                    href="#"
+                    className="flex align-middle items-center p-2.5 rounded-lg font-semibold dark:bg-gray-900 leading-6 text-white cursor:pointer ring-1 ring-emerald-500 hover:bg-emerald-600 hover:ring-emerald-600"
+                  >
+                    Sharp Odds{" "}
+                    <span className="text-white" aria-hidden="true">
+                      &rarr;
+                    </span>
+                  </a>
+                  <a
+                    href="#"
+                    className="inline-block rounded-lg px-4 py-1.5 text-base font-semibold leading-7 text-gray-900 ring-1 ring-gray-900/10 hover:ring-gray-900/20"
+                  >
+                    Live demo{" "}
+                    <span className="text-gray-400" aria-hidden="true">
+                      &rarr;
+                    </span>
+                  </a>
+                </div>
+              </div>
+              <div className="max-w-7xl flex mx-auto justify-center align-middle ring-1 ring-gray-50 mt-10 sm:mt-15">
+                <div className="flex sm:mb-8 sm:flex sm:justify-center">
                   <div className="relative mr-2 overflow-hidden rounded-full py-2 px-4 text-sm leading-6 ring-1 ring-gray-700 hover:ring-emerald-800">
                     <span className="text-gray-400 text-sm font-medium flex items-center">
                       <span className="text-lg mr-1 text-gray-400">
@@ -41,7 +71,7 @@ export default function Home({ data }: { data: any }) {
                     </span>
                   </div>
                 </div>
-                <div className="hidden sm:mb-8 sm:flex sm:justify-center">
+                <div className="sm:mb-8 sm:flex sm:justify-center">
                   <div className="relative mr-2 overflow-hidden rounded-full py-2 px-4 text-sm leading-6 ring-1 ring-gray-700 hover:ring-emerald-800">
                     <span className="text-gray-400 text-sm font-medium flex items-center">
                       <span className="text-lg mr-1 text-gray-400">
@@ -57,48 +87,21 @@ export default function Home({ data }: { data: any }) {
                     </span>
                   </div>
                 </div>
-                <div className="hidden sm:mb-8 sm:flex sm:justify-center">
+                <div className="sm:mb-8 sm:flex sm:justify-center">
                   <div className="relative overflow-hidden rounded-full py-2 px-4 text-sm leading-6 ring-1 ring-gray-700 hover:ring-emerald-800">
                     <span className="text-gray-400 text-sm font-medium flex items-center">
                       <span className="text-lg mr-1 text-gray-400">
                         <GiAmericanFootballHelmet />
                       </span>
                       NFL{" "}
-                      <Link href="#" className="font-semibold text-gray-400">
+                      <Link
+                        href="/sports/nfl"
+                        className="font-semibold text-gray-400"
+                      >
                         <span className="absolute inset-0" aria-hidden="true" />
                       </Link>
                     </span>
                   </div>
-                </div>
-              </div>
-              <div>
-                <h1 className="text-4xl text-gray-300 font-bold tracking-tight sm:text-center sm:text-6xl">
-                  Where sports bettors find the best odds for their bets
-                </h1>
-                <p className="mt-6 text-lg leading-8 text-gray-500 sm:text-center">
-                  Shop lines from all major US and EU sportsbooks. Find value
-                  bets, data, and compare lines to make sure you are getting the
-                  best odds.
-                </p>
-                <div className="mt-8 flex gap-x-4 sm:justify-center">
-                  <a
-                    href="#"
-                    className="inline-block rounded-lg bg-emerald-500 px-4 py-1.5 text-base font-semibold leading-7 text-white ring-1 ring-emerald-500 hover:bg-emerald-600 hover:ring-emerald-600"
-                  >
-                    Sharp Odds{" "}
-                    <span className="text-white" aria-hidden="true">
-                      &rarr;
-                    </span>
-                  </a>
-                  <a
-                    href="#"
-                    className="inline-block rounded-lg px-4 py-1.5 text-base font-semibold leading-7 text-gray-900 ring-1 ring-gray-900/10 hover:ring-gray-900/20"
-                  >
-                    Live demo{" "}
-                    <span className="text-gray-400" aria-hidden="true">
-                      &rarr;
-                    </span>
-                  </a>
                 </div>
               </div>
             </div>
