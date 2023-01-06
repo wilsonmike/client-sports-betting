@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { HiBadgeCheck } from "react-icons/hi";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -60,16 +61,16 @@ export default function Navbar() {
               ))}
             </div>
             <div className="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-end">
-              <a
+              <Link
                 href="#"
-                className="inline-block font-semibold leading-6 text-gray-900"
+                className="flex align-middle items-center p-2 rounded-lg font-semibold dark:bg-gray-800 leading-6 text-white cursor:pointer ring-1 ring-emerald-500 hover:bg-emerald-600 hover:ring-emerald-600"
               >
-                Login
-              </a>
+                <HiBadgeCheck className="text-lg mr-1" /> Get Pro
+              </Link>
             </div>
           </nav>
           <Dialog as="div" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
-            <Dialog.Panel className="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 lg:hidden">
+            <Dialog.Panel className="fixed inset-0 z-10 overflow-y-auto dark:bg-gray-900 px-6 py-6 lg:hidden">
               <div className="flex h-9 items-center justify-between">
                 <div className="flex">
                   <a href="#" className="-m-1.5 p-1.5">
@@ -84,7 +85,7 @@ export default function Navbar() {
                 <div className="flex">
                   <button
                     type="button"
-                    className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+                    className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-300"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     <span className="sr-only">Close menu</span>
@@ -99,7 +100,7 @@ export default function Navbar() {
                       <a
                         key={item.name}
                         href={item.href}
-                        className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10"
+                        className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-300 hover:bg-gray-800"
                       >
                         {item.name}
                       </a>
@@ -108,7 +109,7 @@ export default function Navbar() {
                   <div className="py-6">
                     <a
                       href="#"
-                      className="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-6 text-gray-900 hover:bg-gray-400/10"
+                      className="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-6 text-gray-300 hover:bg-gray-800"
                     >
                       Log in
                     </a>

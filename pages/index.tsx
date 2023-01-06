@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { Inter } from "@next/font/google";
-import { IoMdBasketball, IoMdAmericanFootball } from "react-icons/io";
+import { IoMdBasketball } from "react-icons/io";
 import { GiAmericanFootballHelmet } from "react-icons/gi";
 import Link from "next/link";
 
@@ -48,7 +48,10 @@ export default function Home({ data }: { data: any }) {
                         <IoMdBasketball />
                       </span>
                       NCAAM{" "}
-                      <Link href="#" className="font-semibold text-gray-400">
+                      <Link
+                        href="/sports/ncaab"
+                        className="font-semibold text-gray-400"
+                      >
                         <span className="absolute inset-0" aria-hidden="true" />
                       </Link>
                     </span>
@@ -82,7 +85,7 @@ export default function Home({ data }: { data: any }) {
                     href="#"
                     className="inline-block rounded-lg bg-emerald-500 px-4 py-1.5 text-base font-semibold leading-7 text-white ring-1 ring-emerald-500 hover:bg-emerald-600 hover:ring-emerald-600"
                   >
-                    Get started{" "}
+                    Sharp Odds{" "}
                     <span className="text-white" aria-hidden="true">
                       &rarr;
                     </span>
@@ -105,16 +108,3 @@ export default function Home({ data }: { data: any }) {
     </>
   );
 }
-
-// export async function getServerSideProps() {
-//   const url = process.env.ODD_SERVER_NFL_URL;
-//   const kit = process.env.ODD_SERVER_LOCK;
-//   const res = await fetch(
-//     `${url}?apiKey=${kit}&bookmakers=pinnacle&markets=h2h,spreads,totals&oddsFormat=american`
-//   );
-//   const data = await res.json();
-//   console.log(data);
-
-//   // pass data to the page via props
-//   return { props: { data } };
-// }

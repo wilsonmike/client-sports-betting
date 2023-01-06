@@ -12,7 +12,15 @@ export default function NBA({ data }: { data: any }) {
   return (
     <div className="max-w-7xl justify-center mx-auto px-6">
       <div className="pt-20">
-        <div className="">
+        <div className="cursor-default">
+          <div className="flex justify-end ml-auto dark:text-gray-600">
+            <span className="dark:bg-gray-900 p-2 mb-2 rounded-lg text-xs font-semibold ring-1 ring-gray-700">
+              Any Missing Odds Do Not Have Sharp Data Yet
+            </span>
+            <span className="dark:bg-gray-900 p-2 ml-2 mb-2 rounded-lg text-xs font-semibold ring-1 ring-gray-700">
+              ⚡ Indicates Home Advantage
+            </span>
+          </div>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {items.map((item: any) => (
               <div
@@ -23,7 +31,7 @@ export default function NBA({ data }: { data: any }) {
                   <div className="text-sm font-bold dark:text-gray-600">
                     {item.sport_title}
                   </div>
-                  <div className="text-sm font-medium inline-flex items-center px-2.5 py-0.5 rounded  dark:text-gray-600">
+                  <div className="text-sm font-bold inline-flex items-center dark:text-gray-600">
                     {new Date(item.commence_time).toLocaleDateString()}
                   </div>
                 </div>
@@ -85,13 +93,19 @@ export default function NBA({ data }: { data: any }) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getServerSideProps(context: any) {
   const url = process.env.ODD_SERVER_NBA_URL;
   const kit = process.env.ODD_SERVER_LOCK;
   const data = await fetch(
     `${url}?apiKey=${kit}&bookmakers=pinnacle&markets=h2h,spreads,totals&oddsFormat=american`
   );
   const items = await data.json();
+
+  // set cache-control headers
+  context.res.setHeader(
+    "Cache-Control",
+    "s-maxage=900, stale-while-revalidate=300"
+  );
 
   // pass data to the page via props
   return {
