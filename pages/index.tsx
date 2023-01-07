@@ -2,6 +2,7 @@ import Head from "next/head";
 import { Inter } from "@next/font/google";
 import { IoMdBasketball } from "react-icons/io";
 import { GiAmericanFootballHelmet } from "react-icons/gi";
+import { HiFire } from "react-icons/hi";
 import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -19,7 +20,7 @@ export default function Home({ data }: { data: any }) {
       </Head>
       <main>
         <div className="relative">
-          <div className="mx-auto pt-20 pb-32 px-4 xl:px-0">
+          <div className="mx-auto pt-20 px-4 xl:px-0">
             <div>
               <div className="max-w-3xl mx-auto">
                 <h1 className="text-4xl text-gray-300 font-bold tracking-tight sm:text-center sm:text-6xl">
@@ -51,59 +52,74 @@ export default function Home({ data }: { data: any }) {
                   </a>
                 </div>
               </div>
-              <div className="max-w-7xl flex mx-auto justify-center align-middle ring-1 ring-gray-50 mt-10 sm:mt-15">
-                <div className="flex sm:mb-8 sm:flex sm:justify-center">
-                  <div className="relative mr-2 overflow-hidden rounded-full py-2 px-4 text-sm leading-6 ring-1 ring-gray-700 hover:ring-emerald-800">
-                    <span className="text-gray-400 text-sm font-medium flex items-center">
-                      <span className="text-lg mr-1 text-gray-400">
-                        <IoMdBasketball />
-                      </span>
-                      NBA{" "}
-                      <Link
-                        href="/sports/nba"
-                        className="font-semibold text-gray-400"
-                      >
-                        <span
-                          className="absolute inset-0 text-sm"
-                          aria-hidden="true"
-                        />
-                      </Link>
-                    </span>
-                  </div>
+
+              {/* start trending section */}
+              <div className="max-w-7xl mx-auto border-t border-gray-600 mt-48">
+                <div className="mx-auto max-w-7xl justify-center items-center p-4 align-middle my-auto flex md:mt-2 mt-2 text-gray-400 font-bold text-3xl">
+                  <HiFire className="mr-2 text-emerald-400" />
+                  Trending Quick Links
                 </div>
-                <div className="sm:mb-8 sm:flex sm:justify-center">
-                  <div className="relative mr-2 overflow-hidden rounded-full py-2 px-4 text-sm leading-6 ring-1 ring-gray-700 hover:ring-emerald-800">
-                    <span className="text-gray-400 text-sm font-medium flex items-center">
-                      <span className="text-lg mr-1 text-gray-400">
-                        <IoMdBasketball />
+                <div className="max-w-7xl flex mx-auto justify-center align-middle mt-2 sm:mt-15">
+                  <div className="flex sm:mb-8 sm:flex sm:justify-center">
+                    <div className="relative mr-2 overflow-hidden rounded-full py-2 px-4 text-sm leading-6 ring-1 ring-gray-700 hover:ring-emerald-800">
+                      <span className="text-gray-400 text-sm font-medium flex items-center">
+                        <span className="text-lg mr-1 text-gray-400">
+                          <IoMdBasketball />
+                        </span>
+                        NBA{" "}
+                        <Link
+                          href="/sports/nba"
+                          className="font-semibold text-gray-400"
+                        >
+                          <span
+                            className="absolute inset-0 text-sm"
+                            aria-hidden="true"
+                          />
+                        </Link>
                       </span>
-                      NCAAM{" "}
-                      <Link
-                        href="/sports/ncaab"
-                        className="font-semibold text-gray-400"
-                      >
-                        <span className="absolute inset-0" aria-hidden="true" />
-                      </Link>
-                    </span>
+                    </div>
                   </div>
-                </div>
-                <div className="sm:mb-8 sm:flex sm:justify-center">
-                  <div className="relative overflow-hidden rounded-full py-2 px-4 text-sm leading-6 ring-1 ring-gray-700 hover:ring-emerald-800">
-                    <span className="text-gray-400 text-sm font-medium flex items-center">
-                      <span className="text-lg mr-1 text-gray-400">
-                        <GiAmericanFootballHelmet />
+                  <div className="sm:mb-8 sm:flex sm:justify-center">
+                    <div className="relative mr-2 overflow-hidden rounded-full py-2 px-4 text-sm leading-6 ring-1 ring-gray-700 hover:ring-emerald-800">
+                      <span className="text-gray-400 text-sm font-medium flex items-center">
+                        <span className="text-lg mr-1 text-gray-400">
+                          <IoMdBasketball />
+                        </span>
+                        NCAAM{" "}
+                        <Link
+                          href="/sports/ncaab"
+                          className="font-semibold text-gray-400"
+                        >
+                          <span
+                            className="absolute inset-0"
+                            aria-hidden="true"
+                          />
+                        </Link>
                       </span>
-                      NFL{" "}
-                      <Link
-                        href="/sports/nfl"
-                        className="font-semibold text-gray-400"
-                      >
-                        <span className="absolute inset-0" aria-hidden="true" />
-                      </Link>
-                    </span>
+                    </div>
+                  </div>
+                  <div className="sm:mb-8 sm:flex sm:justify-center">
+                    <div className="relative overflow-hidden rounded-full py-2 px-4 text-sm leading-6 ring-1 ring-gray-700 hover:ring-emerald-800">
+                      <span className="text-gray-400 text-sm font-medium flex items-center">
+                        <span className="text-lg mr-1 text-gray-400">
+                          <GiAmericanFootballHelmet />
+                        </span>
+                        NFL{" "}
+                        <Link
+                          href="/sports/nfl"
+                          className="font-semibold text-gray-400"
+                        >
+                          <span
+                            className="absolute inset-0"
+                            aria-hidden="true"
+                          />
+                        </Link>
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
+              {/* end trending section */}
             </div>
           </div>
         </div>
