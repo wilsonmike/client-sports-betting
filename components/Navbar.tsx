@@ -18,7 +18,7 @@ export default function Navbar() {
 
   return (
     <div className="isolate">
-      <div className="max-w-7xl pt-6 px-4 xl:px-0 mx-auto">
+      <div className="max-w-7xl pt-6 px-2 xl:px-0 mx-auto">
         <nav
           className="flex dark:bg-gray-800 justify-between items-center my-auto ring-1 ring-gray-700 p-4 rounded-lg shadow-sm"
           aria-label="Global"
