@@ -32,7 +32,7 @@ export default function Home({ data }: { data: any }) {
                   best odds.
                 </p>
                 <div className="mt-8 flex gap-x-4 sm:justify-center">
-                  <a
+                  <Link
                     href="#"
                     className="flex align-middle items-center p-2.5 rounded-lg font-semibold dark:bg-gray-900 leading-6 text-white cursor:pointer ring-1 ring-emerald-500 hover:bg-emerald-600 hover:ring-emerald-600"
                   >
@@ -40,16 +40,16 @@ export default function Home({ data }: { data: any }) {
                     <span className="text-white" aria-hidden="true">
                       &rarr;
                     </span>
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href="#"
-                    className="inline-block rounded-lg px-4 py-1.5 text-base font-semibold leading-7 text-gray-900 ring-1 ring-gray-900/10 hover:ring-gray-900/20"
+                    className="inline-block rounded-lg px-4 py-2.5 text-base font-semibold leading-7 text-gray-400 ring-1 ring-gray-400 hover:ring-gray-500 align-middle"
                   >
-                    Live demo{" "}
+                    Tutorial{" "}
                     <span className="text-gray-400" aria-hidden="true">
                       &rarr;
                     </span>
-                  </a>
+                  </Link>
                 </div>
               </div>
 
