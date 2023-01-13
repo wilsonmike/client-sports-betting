@@ -54,8 +54,8 @@ export default function Home({ data }: { data: any }) {
               </div>
 
               {/* start trending section */}
-              <div className="max-w-7xl mx-auto border-t border-gray-600 mt-48">
-                <div className="mx-auto max-w-7xl justify-center items-center p-4 align-middle my-auto flex md:mt-2 mt-2 text-gray-400 font-bold text-3xl">
+              <div className="max-w-7xl mx-auto border-t border-gray-700 xl:mt-48 mt-16">
+                <div className="mx-auto max-w-7xl justify-center items-center p-4 align-middle my-auto flex  md:mt-12 mt-2 text-gray-400 font-bold text-xl md:text-3xl">
                   <HiFire className="mr-2 text-emerald-400" />
                   Trending Quick Links
                 </div>
